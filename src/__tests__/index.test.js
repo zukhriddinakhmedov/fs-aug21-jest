@@ -51,6 +51,13 @@ describe("Testing the app endpoints", () => {
         expect(response.body.price).toBeDefined();
     })
 
+    it("should check that the GET /products endpoint returns a list of products", async () => {
+        const response = await request.get("/products");
+
+        expect(response.status).toBe(200);
+        expect(response.body.length).toBeGreaterThan(0);
+    })
+
 
     afterAll(done => {
         mongoose.connection.dropDatabase()
