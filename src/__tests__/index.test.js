@@ -13,9 +13,7 @@ describe("Testing the testing environment", () => {
     it("should check that true is true", () => {
         expect(true).toBe(true);
     });
-    it("should check that false is false", () => {
-        expect(false).toBe(false);
-    });
+
 
 })
 
