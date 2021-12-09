@@ -1,12 +1,11 @@
-
-import { app } from '../app.js';
+import { httpServer } from '../app';
 import supertest from "supertest"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
 
 dotenv.config()
 
-const request = supertest(app)
+const request = supertest(httpServer)
 
 describe("Testing the testing environment", () => {
 
